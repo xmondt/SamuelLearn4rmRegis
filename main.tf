@@ -23,10 +23,10 @@ resource "azurerm_subnet" "asbn_samuel" {
   address_prefixes     = ["10.0.1.0/24"]
 }
 
-resource "azurerm_network_interface" "example" {
+resource "azurerm_network_interface" "azni_samuel" {
   name                = "myNIC"
-  location            = azurerm_resource_group.example.location
-  resource_group_name = azurerm_resource_group.example.name
+  location            = azurerm_resource_group.arg_samuel.location
+  resource_group_name = azurerm_resource_group.arg_samuel.name
 
   ip_configuration {
     name                          = "myNICConfig"
