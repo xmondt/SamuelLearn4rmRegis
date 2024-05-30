@@ -30,7 +30,7 @@ resource "azurerm_network_interface" "azni_samuel" {
 
   ip_configuration {
     name                          = "myNICConfig"
-    subnet_id                     = azurerm_subnet.example.id
+    subnet_id                     = azurerm_subnet.asbn_samuel.id
     private_ip_address_allocation = "Dynamic"
   }
 }
