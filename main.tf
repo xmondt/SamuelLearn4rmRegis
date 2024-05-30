@@ -50,7 +50,7 @@ resource "azurerm_virtual_machine" "myvn_samuel" {
   }
 
   os_profile {
-    computer_name  = "myvm"
+    computer_name  = "myvm_ubuntu"
     admin_username = "adminuser"
     admin_password = "P@ssw0rd1234"
   }
