@@ -16,10 +16,10 @@ resource "azurerm_virtual_network" "avn_samuel" {
   resource_group_name = azurerm_resource_group.arg_samuel.name
 }
 
-resource "azurerm_subnet" "example" {
+resource "azurerm_subnet" "asbn_samuel" {
   name                 = "mySubnet"
-  virtual_network_name = azurerm_virtual_network.example.name
-  resource_group_name  = azurerm_resource_group.example.name
+  virtual_network_name = azurerm_virtual_network.avn_samuel.name
+  resource_group_name  = azurerm_resource_group.arg_samuel.name
   address_prefixes     = ["10.0.1.0/24"]
 }
 
