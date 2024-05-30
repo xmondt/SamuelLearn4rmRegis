@@ -9,7 +9,7 @@ resource "azurerm_resource_group" "arg_samuel" {
   location = "East US"
 }
 
-resource "azurerm_virtual_network" "example" {
+resource "azurerm_virtual_network" "avn_samuel" {
   name                = "myVNet"
   address_space       = ["10.0.0.0/16"]
   location            = azurerm_resource_group.arg_samuel.location
