@@ -35,11 +35,11 @@ resource "azurerm_network_interface" "azni_samuel" {
   }
 }
 
-resource "azurerm_virtual_machine" "example" {
+resource "azurerm_virtual_machine" "myvn_samuel" {
   name                  = "myVM"
-  location              = azurerm_resource_group.example.location
-  resource_group_name   = azurerm_resource_group.example.name
-  network_interface_ids = [azurerm_network_interface.example.id]
+  location              = azurerm_resource_group.arg_samuel.location
+  resource_group_name   = azurerm_resource_group.arg_samuel.name
+  network_interface_ids = [azurerm_network_interface.azni_samuel.id]
   vm_size               = "Standard_B2s"
 
   storage_image_reference {
